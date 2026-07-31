@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>
+    Ridhi Jaggi | Portfolio
+  </title>
+
+  <meta name="description" content="Ridhi Jaggi — AI/ML engineer and B.Tech student building computer vision, NLP, and machine learning projects.">
+  <meta name="keywords" content="Ridhi Jaggi, AI, Machine Learning, Computer Vision, Python, Portfolio" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <!-- ***** Header ***** -->
+
+  <header class="header" role="banner" id="top">
+    <div class="hero-photo" aria-hidden="true"></div>
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <canvas class="hero-canvas" id="hero-constellation" aria-hidden="true"></canvas>
+
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <li class="nav__logo">
+            <img src="images/logo.png" alt="Logo" class="logo">
+          </li>
+          <li class="nav__item"><a href="#services-section" class="nav__link">Education</a></li>
+          <li class="nav__item"><a href="#clients" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__text-box row">
+      <div class="header__text">
+        <p class="header__greeting">Hi, I am</p>
+
+        <h1 class="heading-primary" id="animated-name">
+          <span>Ridhi Jaggi</span>
+        </h1>
+
+        <p class="header__tagline">
+          an innovator, dreamer, and relentless seeker of growth and discovery.
+        </p>
+
+        <a href="#contact" class="btn-cta">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" aria-hidden="true">
+      <span></span>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Education ***** -->
+
+    <section id="services-section">
+      <div class="services reveal">
+        <h2>Education</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <div class="timeline-item reveal-left">
+          <span class="timeline-node" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <div class="timeline-card__content">
+              <h4>Indira Gandhi Delhi Technical University for Women <i>(2022-26)</i></h4>
+              <h5><i class="ri-arrow-right-up-line"></i> B.Tech - Artificial Intelligence and Machine Learning</h5>
+              <h4>CGPA - 9.41</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-right">
+          <span class="timeline-node" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <div class="timeline-card__content">
+              <h4><b>DPS MATHURA ROAD</b></h4>
+              <h5>&bull; Senior Secondary (XII) - 95.2%</h5>
+              <h5>&bull; Secondary (X) - 93.6%</h5>
+              <div class="edu-honors">
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Projects ***** -->
+
+    <section class="client" id="clients">
+      <div class="row">
+        <h2 class="reveal">Projects</h2>
+
+        <div class="project-grid">
+
+          <article class="project-card reveal-up" data-tilt>
+            <div class="project-card__inner">
+              <img src="images/indicsign.jpg" alt="IndicSign" class="project-card__image" loading="lazy">
+              <h3 class="project-card__title">IndicSign: Gesture Recognition</h3>
+              <p class="project-card__desc">Interprets Indian Sign Language using OpenCV and MediaPipe with a RandomForestClassifier for accurate gesture recognition. Trained on a custom dataset, it enhances communication for individuals with hearing impairments.</p>
+              <ul class="project-card__tags">
+                <li>OpenCV</li><li>MediaPipe</li><li>scikit-learn</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://github.com/RIDHIJ-19/Indian_Sign_Language" class="btn github-btn" target="_blank" rel="noopener">GitHub</a>
+                <button type="button" class="btn btn--video" data-video="https://drive.google.com/file/d/1ip8d4NJDdsUz1BJOQ8EAsz6bWUCMXd_w/preview">&#9654; Watch Demo</button>
+              </div>
+              <div class="project-card__video" hidden></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-tilt>
+            <div class="project-card__inner">
+              <img src="images/pixelpatroller.jpg" alt="Pixel Patrollers" class="project-card__image" loading="lazy">
+              <h3 class="project-card__title">Pixel Patrollers</h3>
+              <p class="project-card__desc">An AI-driven solution that detects cyberbullying, deepfake content, and misinformation using advanced machine learning models. It ensures a safer online space for users and businesses through powerful text, image, and video analysis capabilities.</p>
+              <ul class="project-card__tags">
+                <li>Machine Learning</li><li>NLP</li><li>Computer Vision</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://github.com/RIDHIJ-19/Pixel-Patroller/tree/main" class="btn github-btn" target="_blank" rel="noopener">GitHub</a>
+                <button type="button" class="btn btn--video" data-video="https://www.youtube.com/embed/m9fEF81ndqU">&#9654; Watch Demo</button>
+              </div>
+              <div class="project-card__video" hidden></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-tilt>
+            <div class="project-card__inner">
+              <img src="images/digiscan.jpg" alt="DigiScan" class="project-card__image" loading="lazy">
+              <h3 class="project-card__title">DigiScan</h3>
+              <p class="project-card__desc">Python-based MNIST digit recognition system built using NumPy, Keras, and Matplotlib. It leverages machine learning for high accuracy and features an interactive GUI for precise hand-drawn digit identification.</p>
+              <ul class="project-card__tags">
+                <li>NumPy</li><li>Keras</li><li>Matplotlib</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://github.com/RIDHIJ-19/Normid-DigiScan" class="btn github-btn" target="_blank" rel="noopener">GitHub</a>
+                <button type="button" class="btn btn--video" data-video="https://drive.google.com/file/d/1WFYzPdo0f70m-COGTUyQcTAUHTrxTMdb/preview">&#9654; Watch Demo</button>
+              </div>
+              <div class="project-card__video" hidden></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-tilt>
+            <div class="project-card__inner">
+              <img src="images/alkinomind.jpg" alt="AlkinoMind" class="project-card__image" loading="lazy">
+              <h3 class="project-card__title">AlkinoMind</h3>
+              <p class="project-card__desc">Python-based interactive game inspired by Akinator, designed to guess characters based on user responses. Leveraging the Akinator-python library, it offers a fun and engaging experience by intelligently narrowing down possibilities through strategic questioning.</p>
+              <ul class="project-card__tags">
+                <li>Python</li><li>Akinator API</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://github.com/RIDHIJ-19/AlkinoMind" class="btn github-btn" target="_blank" rel="noopener">GitHub</a>
+                <button type="button" class="btn btn--video" data-video="https://drive.google.com/file/d/1uCPbZX0-8PwiAoiQbHEP1GnyQbx8MMQK/preview">&#9654; Watch Demo</button>
+              </div>
+              <div class="project-card__video" hidden></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-tilt>
+            <div class="project-card__inner">
+              <img src="images/sudoku.jpg" alt="SudoSensei" class="project-card__image" loading="lazy">
+              <h3 class="project-card__title">SudoSensei</h3>
+              <p class="project-card__desc">Created a Sudoku solver in C++ using a backtracking algorithm, showcasing strong problem-solving and algorithmic skills.</p>
+              <ul class="project-card__tags">
+                <li>C++</li><li>Backtracking</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://github.com/RJ-19/Sudoku-solver/tree/main" class="btn github-btn" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-tilt>
+            <div class="project-card__inner">
+              <img src="images/txt-img.jpg" alt="EchoVision" class="project-card__image" loading="lazy">
+              <h3 class="project-card__title">EchoVision: AI-Powered Image Captioning</h3>
+              <p class="project-card__desc">Built an AI-powered image captioning model using ViT-GPT2, combining computer vision and NLP to generate descriptive captions efficiently.</p>
+              <ul class="project-card__tags">
+                <li>ViT-GPT2</li><li>PyTorch</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://github.com/RIDHIJ-19/echovision" class="btn github-btn" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** About ***** -->
+
+    <section class="about" id="about">
+      <div class="row">
+        <h2 class="reveal">About Me</h2>
+        <div class="row about__content">
+          <div class="about__photo-container reveal-left">
+            <img class="about__photo" src="./images/explore-img.png" alt="My Photo" />
+          </div>
+
+          <div class="about__text reveal-right">
+            <h5>
+              I am an enthusiastic B.Tech student specializing in Artificial Intelligence and Machine Learning, driven by a deep curiosity for technology and a passion for problem-solving. With a strong foundation in Python, C++, and data science, I enjoy exploring innovative solutions through coding. My projects reflect my commitment to impactful tech development, including accessibility tools, interactive games, and machine learning models. I thrive in collaborative environments, value effective time management, and embrace challenges with a structured and determined mindset. Beyond coding, I find creative expression through drawing and content creation, blending technical skills with artistic flair to bring ideas to life.
+            </h5>
+
+            <a href="https://drive.google.com/file/d/1ewaq0Os8udq_OJhaZkCyWYtYrw-GuBY2/view?usp=sharing"
+               class="btn-cta btn-cta--resume" target="_blank" rel="noopener">
+              My Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ***** Contact ***** -->
+    <section class="contact" id="contact">
+      <div class="row">
+        <h2 class="reveal">Get in Touch</h2>
+        <h6 class="typing-effect">Reach out, and let's create a universe of possibilities together!</h6>
+
+        <div class="contact-container reveal-up">
+          <div class="contact-box">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+              <input type="hidden" name="access_key" value="fe2c39fd-4ecb-44b3-9f71-a3944c5d92d8">
+
+              <input type="text" class="contact-inputs" name="name" placeholder="Your Name" required>
+              <input type="email" class="contact-inputs" name="email" placeholder="Your Email" required>
+              <textarea class="contact-inputs" name="message" placeholder="Your Message" required></textarea>
+
+              <button type="submit">
+                Submit <img src="images/arrow-up.svg" alt="Send">
+              </button>
+            </form>
+          </div>
+
+          <img class="contact-image" src="images/form.jpg" alt="astronaut">
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- ***** Footer ***** -->
+
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+
+      <ul class="footer__social-links">
+
+        <li class="footer__social-link-item">
+          <a href="https://github.com/RIDHIJ-19/" title="Link to Github Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/ridhi-jaggi-657705259/">
+            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+
+  <!-- ***** Ship's Log Widget ***** -->
+  <div class="ship-log" id="ship-log">
+    <button class="ship-log__toggle" id="ship-log-toggle" type="button" aria-expanded="true" aria-controls="ship-log-panel">
+      <span class="ship-log__dot" aria-hidden="true"></span> SHIP'S LOG
+    </button>
+
+    <div class="ship-log__panel" id="ship-log-panel" role="status">
+      <div class="ship-log__header">
+        <span>TRANSMISSION</span>
+        <span class="ship-log__stardate" id="ship-log-stardate"></span>
+      </div>
+      <p class="ship-log__entry" aria-live="polite"><span id="ship-log-entry"></span><span class="ship-log__cursor" aria-hidden="true">&#9608;</span></p>
+      <button class="ship-log__next" id="ship-log-next" type="button">Next transmission &rarr;</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="./index.js"></script>
+  <script type="module" src="./hero-space.js"></script>
+  <script src="./ship-log-data.js"></script>
+  <script src="./ship-log.js"></script>
+</body>
+
+</html>
