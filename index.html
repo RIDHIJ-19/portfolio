@@ -35,8 +35,9 @@
           <li class="nav__logo">
             <img src="images/logo.png" alt="Logo" class="logo">
           </li>
-          <li class="nav__item"><a href="#services-section" class="nav__link">Education</a></li>
+          <li class="nav__item"><a href="#services-section" class="nav__link">Experience</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
           <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
           <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
@@ -70,13 +71,13 @@
 
     <section id="services-section">
       <div class="services reveal">
-        <h2>Education</h2>
+        <h2>Education &amp; Experience</h2>
       </div>
 
       <div class="timeline">
         <div class="timeline-line" aria-hidden="true"></div>
 
-        <div class="timeline-item reveal-left">
+        <div class="timeline-item timeline-item--right timeline-row-1 reveal-right">
           <span class="timeline-node" aria-hidden="true"></span>
           <div class="timeline-card">
             <div class="timeline-card__content">
@@ -87,7 +88,49 @@
           </div>
         </div>
 
-        <div class="timeline-item reveal-right">
+        <div class="timeline-item timeline-item--left timeline-row-1 reveal-left">
+          <span class="timeline-node" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <div class="timeline-card__content">
+              <h4>Amazon <i>(Jan - Jun 2026)</i></h4>
+              <h5><i class="ri-arrow-right-up-line"></i> Software Development Intern</h5>
+              <ul class="timeline-card__list">
+                <li>Owned and built the end-to-end integration test infrastructure from scratch for the team's service, including Hydra testing and provisioning AWS CloudFormation/CDK stacks to support automated testing, shipping 65K+ lines of code to production.</li>
+                <li>Authored 57+ integration tests covering 5+ APIs on the new infrastructure, and implemented a new DELETE API.</li>
+                <li>Designed an isolated, personal AWS stack for experimentation, letting engineers test changes independently before merging into the shared pipeline instead of blocking others.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item--left timeline-row-2 reveal-left">
+          <span class="timeline-node" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <div class="timeline-card__content">
+              <h4>Bank of New York <i>(Jun - Aug 2025)</i></h4>
+              <h5><i class="ri-arrow-right-up-line"></i> Summer Intern</h5>
+              <ul class="timeline-card__list">
+                <li>Architected an automated transaction validation framework for multi-currency payment workflows, reducing manual effort in staging verification.</li>
+                <li>Built a financial message automation system generating compliant SWIFT messages from JIRA workflows, reducing manual message-processing errors.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item--left timeline-row-3 reveal-left">
+          <span class="timeline-node" aria-hidden="true"></span>
+          <div class="timeline-card">
+            <div class="timeline-card__content">
+              <h4>IGDTUW - AI &amp; DS Department <i>(May - Jul 2023)</i></h4>
+              <h5><i class="ri-arrow-right-up-line"></i> Visual Computing Research Intern</h5>
+              <ul class="timeline-card__list">
+                <li>Trained and evaluated CNN architectures (ResNet, VGG16, DenseNet) in PyTorch for early pneumonia detection from 5,216 chest X-ray images, reaching up to 93.91% accuracy through hyperparameter tuning.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item timeline-item--right timeline-row-4 reveal-right">
           <span class="timeline-node" aria-hidden="true"></span>
           <div class="timeline-card">
             <div class="timeline-card__content">
@@ -95,7 +138,7 @@
               <h5>&bull; Senior Secondary (XII) - 95.2%</h5>
               <h5>&bull; Secondary (X) - 93.6%</h5>
               <div class="edu-honors">
-               
+
               </div>
             </div>
           </div>
@@ -124,6 +167,21 @@
                 <button type="button" class="btn btn--video" data-video="https://drive.google.com/file/d/1ip8d4NJDdsUz1BJOQ8EAsz6bWUCMXd_w/preview">&#9654; Watch Demo</button>
               </div>
               <div class="project-card__video" hidden></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal-up" data-tilt>
+            <div class="project-card__inner">
+              <img src="images/assessment-agent.png" alt="AI Assessment Recommendation API" class="project-card__image" loading="lazy">
+              <h3 class="project-card__title">AI Assessment Recommendation API</h3>
+              <p class="project-card__desc">An AI-powered API that recommends relevant assessments using a hybrid architecture combining LLM reasoning (Groq), semantic search (FAISS), and ONNX embeddings with rule-based filtering, exposed through a conversational chat endpoint.</p>
+              <ul class="project-card__tags">
+                <li>Python</li><li>Groq LLM</li><li>FAISS</li><li>ONNX</li>
+              </ul>
+              <div class="project-card__links">
+                <a href="https://github.com/RIDHIJ-19/assessment_agent" class="btn github-btn" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://assessment-agent-n1oq.onrender.com" class="btn" target="_blank" rel="noopener">Live API</a>
+              </div>
             </div>
           </article>
 
@@ -203,6 +261,31 @@
             </div>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ***** Publications ***** -->
+
+    <section class="publications" id="publications">
+      <div class="row">
+        <h2 class="reveal">Publications</h2>
+
+        <div class="publication-list">
+          <article class="publication-card reveal-up">
+            <span class="publication-card__date">March 2026</span>
+            <h3 class="publication-card__title">Evaluating Sentiment Classification Performance of LLMs Using Frankenstein as a Benchmark Text</h3>
+            <p class="publication-card__venue">IEEE AIEI 2026 — IEEE International Conference on AI Engineering &amp; Innovations <span class="publication-card__badge">Scopus Indexed</span></p>
+            <p class="publication-card__note">Recognised as a high-quality contribution; eligible for IEEE Security &amp; Privacy Magazine.</p>
+            <a href="https://ieeexplore.ieee.org/abstract/document/11497145" class="btn github-btn" target="_blank" rel="noopener">View Paper</a>
+          </article>
+
+          <article class="publication-card reveal-up">
+            <span class="publication-card__date">April 2026</span>
+            <h3 class="publication-card__title">Multimodal Data Fusion: An Ensemble Learning Approach for Osteoporosis Detection</h3>
+            <p class="publication-card__venue">ICRACS 2026 — International Conference on Recent Advances in AI, Computer Vision, and Smart Systems <span class="publication-card__badge">Scopus Indexed</span></p>
+            <p class="publication-card__note">Publication underway in American Institute of Physics &amp; IET Conference Proceedings.</p>
+          </article>
         </div>
       </div>
     </section>

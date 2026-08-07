@@ -240,10 +240,12 @@ window.addEventListener("DOMContentLoaded", function () {
     ];
 
     revealGroups.forEach(({ selector, vars }) => {
-      document.querySelectorAll(selector).forEach((el) => {
+      document.querySelectorAll(selector).forEach((el, i) => {
+        const isProjectCard = el.matches(".project-grid .project-card");
         gsap.from(el, {
           ...vars,
-          duration: 0.8,
+          duration: isProjectCard ? 0.7 : 0.8,
+          delay: isProjectCard ? (i % 3) * 0.1 : 0,
           ease: "power2.out",
           scrollTrigger: {
             trigger: el,
@@ -251,21 +253,6 @@ window.addEventListener("DOMContentLoaded", function () {
             toggleActions: "play none none reverse",
           },
         });
-      });
-    });
-
-    gsap.utils.toArray(".project-grid .project-card").forEach((card, i) => {
-      gsap.from(card, {
-        y: 60,
-        opacity: 0,
-        duration: 0.7,
-        delay: (i % 3) * 0.1,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: card,
-          start: "top 90%",
-          toggleActions: "play none none reverse",
-        },
       });
     });
   }

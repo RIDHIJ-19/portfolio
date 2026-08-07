@@ -751,6 +751,68 @@ body:not(.user-is-tabbing) a:focus {
 
 
 /* --------------------------------------- */
+/* ----- Publications ----- */
+/* --------------------------------------- */
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.publication-card {
+    background-color: #151415;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 112, 166, 0.25);
+    box-shadow: 0 20px 30px rgba(86, 3, 19, 0.2), 0 -10px 20px rgba(57, 2, 31, 0.15);
+    padding: 3rem;
+    transition: border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.publication-card:hover {
+    border-color: rgba(255, 112, 166, 0.7);
+    box-shadow: 0 25px 45px rgba(255, 20, 100, 0.25);
+}
+
+.publication-card__date {
+    display: inline-block;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffb6d9;
+    margin-bottom: 1rem;
+}
+
+.publication-card__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.publication-card__venue {
+    font-size: 1.4rem;
+    color: var(--white-1);
+    margin: 0 0 1rem;
+}
+
+.publication-card__badge {
+    display: inline-block;
+    margin-left: 0.6rem;
+    padding: 0.2rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    background: rgba(255, 112, 166, 0.12);
+    border: 1px solid rgba(255, 112, 166, 0.4);
+    color: #ffb6d9;
+}
+
+.publication-card__note {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--white-1);
+    margin: 0 0 1.5rem;
+}
+
+/* --------------------------------------- */
 /* ----- About ----- */
 /* --------------------------------------- */
 
@@ -954,37 +1016,59 @@ body:not(.user-is-tabbing) a:focus {
     position: relative;
     width: 100%;
     padding: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 6rem;
   }
 
   .timeline-line {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 30px;
+    left: 50%;
     width: 3px;
+    transform: translateX(-50%);
     background: linear-gradient(180deg, transparent, var(--pink), transparent);
   }
 
   .timeline-item {
     position: relative;
-    padding-left: 80px;
-    margin-bottom: 6rem;
   }
 
-  .timeline-item:last-child {
-    margin-bottom: 0;
+  .timeline-item--left {
+    grid-column: 1;
+    padding-right: 40px;
   }
+
+  .timeline-item--right {
+    grid-column: 2;
+    padding-left: 40px;
+  }
+
+  .timeline-row-1 { grid-row: 1; }
+  .timeline-row-2 { grid-row: 2; }
+  .timeline-row-3 { grid-row: 3; }
+  .timeline-row-4 { grid-row: 4; }
 
   .timeline-node {
     position: absolute;
     top: 8px;
-    left: 30px;
     width: 18px;
     height: 18px;
     border-radius: 50%;
     background: var(--pink);
-    transform: translateX(-50%);
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 1), 0 0 15px 4px rgba(255, 50, 88, 0.8);
+  }
+
+  .timeline-item--left .timeline-node {
+    right: -40px;
+    transform: translateX(50%);
+  }
+
+  .timeline-item--right .timeline-node {
+    left: -40px;
+    transform: translateX(-50%);
   }
 
   .timeline-node::after {
@@ -1027,10 +1111,63 @@ body:not(.user-is-tabbing) a:focus {
     border-radius: 50%;
   }
 
+  .timeline-card__list {
+    list-style: none;
+    margin-top: 1rem;
+  }
+
+  .timeline-card__list li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+
+  .timeline-card__list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-card__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--pink);
+  }
+
   @media (max-width: 700px) {
+    .timeline {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
+
     .timeline-line { left: 16px; }
-    .timeline-node { left: 16px; }
-    .timeline-item { padding-left: 46px; }
+
+    .timeline-item,
+    .timeline-item--left,
+    .timeline-item--right {
+      grid-column: 1;
+      padding-left: 46px;
+      padding-right: 0;
+    }
+
+    .timeline-row-1,
+    .timeline-row-2,
+    .timeline-row-3,
+    .timeline-row-4 {
+      grid-row: auto;
+    }
+
+    .timeline-item--left .timeline-node,
+    .timeline-item--right .timeline-node {
+      left: 16px;
+      right: auto;
+      transform: translateX(-50%);
+    }
   }
 
   /* github and dem0*/
