@@ -692,6 +692,8 @@ body:not(.user-is-tabbing) a:focus {
 
 .project-card__image {
     width: 70%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     border-radius: 10px;
     margin-bottom: 1.5rem;
 }
